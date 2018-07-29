@@ -7,8 +7,8 @@ require_relative("../song.rb")
 class RoomsTest < MiniTest::Test
 
   def setup()
-    @guest1 = Guest.new("Suzy")
-    @guest2 = Guest.new("Frankie")
+    @guest1 = Guest.new("Suzy", 20)
+    @guest2 = Guest.new("Frankie", 4)
 
     @song = Song.new("Believe", "Cher", "Pop")
     @song1 = Song.new("Can't Help Falling In Love", "Elvis", "Pop")
@@ -22,7 +22,7 @@ class RoomsTest < MiniTest::Test
   def test_room_has_name()
     assert_equal("One", @room1.name())
   end
-
+  
   def test_rooms_start_empty_of_guests()
     assert_equal(0, @room2.guests_in_room())
   end
@@ -46,7 +46,7 @@ class RoomsTest < MiniTest::Test
 
   def test_add_song_to_room()
     @room2.add_song_to_room(@song2)
-    result = @room2.songs_in_room
+    result = @room2.songs_in_room()
     assert_equal(1, result)
   end
 

@@ -7,7 +7,6 @@ class Rooms
     @people_in_room = []
     @guest = []
     @songs = []
-
   end
 
   def guests_in_room()
@@ -15,7 +14,7 @@ class Rooms
   end
 
   def guest_check_in(guest)
-     @people_in_room << guest
+    return @people_in_room << guest
   end
 
   def guest_check_out(guest)
@@ -31,11 +30,6 @@ class Rooms
   def add_song_to_room(song)
     @songs << song
   end
-
-
-
-
-
 
 end
 

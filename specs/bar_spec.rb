@@ -2,10 +2,14 @@ require("minitest/autorun")
 require("minitest/rg")
 require_relative("../bar.rb")
 require_relative("../rooms.rb")
+require_relative("../guest.rb")
 
 class BarTest < MiniTest::Test
 
   def setup()
+    @guest1 = Guest.new("Suzy", 20)
+    @guest2 = Guest.new("Frankie", 4)
+
     @room1 = Rooms.new("One")
     @room2 = Rooms.new("Two")
     @rooms = [@room1, @room2]
