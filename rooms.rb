@@ -1,12 +1,12 @@
 class Rooms
 
-  attr_reader :name, :people_in_room, :guest, :song
+  attr_reader :name, :people_in_room, :guest, :songs
 
   def initialize(name)
     @name = name
     @people_in_room = []
     @guest = []
-    @song = []
+    @songs = []
 
   end
 
@@ -15,7 +15,7 @@ class Rooms
   end
 
   def guest_check_in(guest)
-    return @people_in_room << guest
+     @people_in_room << guest
   end
 
   def guest_check_out(guest)
@@ -25,7 +25,11 @@ class Rooms
   # HOW DO I MAKE IT SO IT ISN'T BY THE GUESTS SPECIFIC INDEX NUMBER as if 50 people in room might be done by name, etc  Would that be enumeration .find?
 
   def songs_in_room()
-    return @song
+    return @songs.length()
+  end
+
+  def add_song_to_room(song)
+    @songs << song
   end
 
 

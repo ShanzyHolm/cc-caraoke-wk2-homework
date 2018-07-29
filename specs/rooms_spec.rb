@@ -41,7 +41,13 @@ class RoomsTest < MiniTest::Test
   end
 
   def test_rooms_starts_with_0_songs()
-    assert_equal(0, @room1.songs_in_room().length())
+    assert_equal(0, @room1.songs_in_room())
+  end
+
+  def test_add_song_to_room()
+    @room2.add_song_to_room(@song2)
+    result = @room2.songs_in_room
+    assert_equal(1, result)
   end
 
 
