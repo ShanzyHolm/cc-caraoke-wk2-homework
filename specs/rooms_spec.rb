@@ -1,6 +1,7 @@
 require("minitest/autorun")
 require("minitest/rg")
 require_relative("../rooms.rb")
+require_relative("../song.rb")
 
 class RoomsTest < MiniTest::Test
 
