@@ -4,7 +4,7 @@ class Rooms
 
   def initialize(name)
     @name = name
-    @people_in_room = 0
+    @people_in_room = []
     @guest = []
     @song = []
 
@@ -18,7 +18,9 @@ class Rooms
     return @song
   end
 
-
+  def guest_check_in(guest)
+    return @people_in_room << guest
+  end
 
 
 

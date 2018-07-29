@@ -24,7 +24,13 @@ class RoomsTest < MiniTest::Test
   end
 
   def test_rooms_start_empty_of_guests()
-    assert_equal(0, @room2.guests_in_room())
+    assert_equal(0, @room2.guests_in_room().length())
+  end
+
+  def test_check_guest_into_room()
+    @room1.guest_check_in(@guest1)
+    result = @room1.guests_in_room().length()
+    assert_equal(1, result)
   end
 
   def test_rooms_starts_with_0_songs()
