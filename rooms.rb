@@ -1,26 +1,30 @@
 class Rooms
 
-  attr_reader :name
+  attr_reader :name, :room
 
   def initialize(name)
     @name = name
     # @guest = guest
-    @room1 = 0
-    @room2 = 0
+    @room = 0
+    # @room2 = 0
   end
 
-  def guest_check_in(room, guest)
-    room = @guests_in_room1 << guest
-    return @guests_in_room1
+  def guests_in_room()
+    return @room
   end
 
-  def guests_in_room1()
-    return @room1
-  end
+  # def guest_check_in(room, guest)
+  #   room = @guests_in_room1 << guest
+  #   return @guests_in_room1
+  # end
 
-  def guests_in_room2()
-    return @room2
-  end
+  # def guests_in_room1()
+  #   return @room1
+  # end
+  #
+  # def guests_in_room2()
+  #   return @room2
+  # end
 
   # def guest_check_out(room, guest)
   #   room = @guests_in_room2.delete(guest)

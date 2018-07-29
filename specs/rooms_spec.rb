@@ -8,12 +8,12 @@ class RoomsTest < MiniTest::Test
 
   def setup()
     @guest1 = Guest.new("Suzy")
-    @guest2 = Guest.new("Frankie")
-    @guests = [@guest1, @guest2]
+    # @guest2 = Guest.new("Frankie")
+    # @guests = [@guest1, @guest2]
 
     @room1 = Rooms.new("One")
-    @room2 = Rooms.new("Two")
-    @rooms = [@room1, @room2]
+    # @room2 = Rooms.new("Two")
+    # @rooms = [@room1, @room2]
   end
 
   def test_room_has_name()
@@ -21,9 +21,13 @@ class RoomsTest < MiniTest::Test
   end
 
   def test_rooms_start_empty()
-    assert_equal(0, @room1.guests_in_room1())
-    assert_equal(0, @room2.guests_in_room2())
+    assert_equal(0, @room1.guests_in_room())
   end
+
+  # def test_rooms_start_empty()
+  #   assert_equal(0, @room1.guests_in_room1())
+  #   assert_equal(0, @room2.guests_in_room2())
+  # end
 
   # def test_check_guest_into_room()
   #   result = @room1.guest_check_in(@guest1)
