@@ -10,11 +10,11 @@ class BarTest < MiniTest::Test
     @room2 = Rooms.new("Two")
     @rooms = [@room1, @room2]
 
-    @bar = Bar.new("CodeClan Caraoke", @rooms)
+    @bar = Bar.new("CodeClan Caraoke Bar", @rooms)
   end
 
   def test_bar_has_name()
-    assert_equal("CodeClan Caraoke", @bar.name())
+    assert_equal("CodeClan Caraoke Bar", @bar.name())
   end
 
   def test_bar_has_rooms()
