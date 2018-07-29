@@ -11,16 +11,24 @@ class Rooms
   end
 
   def guests_in_room()
-    return @people_in_room
-  end
-
-  def songs_in_room()
-    return @song
+    return @people_in_room.length()
   end
 
   def guest_check_in(guest)
     return @people_in_room << guest
   end
+
+  def guest_check_out(guest)
+    index = @people_in_room.index(guest)
+    @people_in_room.slice!(index, 2)
+  end
+  # HOW DO I MAKE IT SO IT ISN'T BY THE GUESTS SPECIFIC INDEX NUMBER as if 50 people in room might be done by name, etc  Would that be enumeration .find?
+
+  def songs_in_room()
+    return @song
+  end
+
+
 
 
 
