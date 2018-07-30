@@ -22,7 +22,7 @@ class RoomsTest < MiniTest::Test
   def test_room_has_name()
     assert_equal("One", @room1.name())
   end
-  
+
   def test_rooms_start_empty_of_guests()
     assert_equal(0, @room2.guests_in_room())
   end
@@ -48,6 +48,11 @@ class RoomsTest < MiniTest::Test
     @room2.add_song_to_room(@song2)
     result = @room2.songs_in_room()
     assert_equal(1, result)
+  end
+
+  def test_if_space_in_room()
+    @room1.guest_check_in(@guest1)
+    assert_equal(1, @room1.guests_in_room())
   end
 
 

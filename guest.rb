@@ -7,4 +7,8 @@ def initialize(name, money)
   @money = money
 end
 
+def pay_entry_fee(bar)
+  @money -= bar.entry_fee()
+end
+
 end

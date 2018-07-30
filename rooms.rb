@@ -31,6 +31,14 @@ class Rooms
     @songs << song
   end
 
+  def room_space()
+    if @people_in_room < 2
+      guest_check_in
+      return true
+    end
+    return "Sorry no more room."
+  end
+
 end
 
 

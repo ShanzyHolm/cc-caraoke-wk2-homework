@@ -30,11 +30,11 @@ class BarTest < MiniTest::Test
   end
 
 
-#   def test_guest_can_pay_entry_fee()
-#     @guest1.pay_entry_fee(@bar.entry_fee())
-#     assert_equal(10, @guest1.money())
-#     assert_equal(10, @bar.till())
-#   end
+  # def test_guest_can_pay_entry_fee()
+  #   @guest1.pay_entry_fee(@bar.entry_fee())
+  #   assert_equal(10, @guest1.money())
+  #   assert_equal(10, @bar.till())
+  # end
 #
 #   def test_guest_cannot_pay_entry_fee()
 #

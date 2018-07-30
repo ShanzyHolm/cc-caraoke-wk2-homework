@@ -14,7 +14,8 @@ class Bar
   end
 
   # def pay_entry_fee(guest)
-  #   guest.
+  #   @till += @entry_fee
+  #   # guest
   # end
 
 end
