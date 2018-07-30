@@ -6,6 +6,8 @@ require_relative("../bar.rb")
 class GuestTest < MiniTest::Test
 
   def setup()
+    @bar = Bar.new("CodeClan Caraoke Bar", @rooms)
+
     @guest1 = Guest.new("Suzy", 20)
     @guest2 = Guest.new("Frankie", 4)
   end
@@ -21,7 +23,7 @@ class GuestTest < MiniTest::Test
   def test_guest_can_pay_entry_fee()
     @guest1.pay_entry_fee(@bar)
     assert_equal(10, @guest1.money())
-    # assert_equal(10, @bar.till())
+    assert_equal(10, @bar.till())
   end
 
 end

@@ -9,13 +9,12 @@ class Bar
     @till = 0
   end
 
-  def entry_fee()
-    return @entry_fee
-  end
+  # def entry_fee()
+  #   return @entry_fee
+  # end
 
-  # def pay_entry_fee(guest)
-  #   @till += @entry_fee
-  #   # guest
+  # def pay_entry_fee()
+  #   @till += bar.entry_fee()
   # end
 
 end

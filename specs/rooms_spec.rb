@@ -55,6 +55,12 @@ class RoomsTest < MiniTest::Test
     assert_equal(1, @room1.guests_in_room())
   end
 
+  def test_no_space_in_room()
+    @room1.room_space(@guest1)
+    @room1.room_space(@guest2)
+    assert_equal(1, @room1.guests_in_room())
+  end
+
 
 
 end
